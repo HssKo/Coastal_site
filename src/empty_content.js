@@ -7,6 +7,7 @@ button.addEventListener('click', (e) => {
     video.classList.toggle("hidden");
     button.classList.toggle("hidden");
     close.classList.toggle("black");
+    video.play();
 })
 close.addEventListener('click', (e) => {
     video.classList.toggle("hidden");
