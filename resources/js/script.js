@@ -1,17 +1,47 @@
 const button = document.querySelector(".mine");
 const video = document.getElementById("video");
-const close = document.querySelector(".close");
 
+// Scroll window button
 button.addEventListener('click', (e) => {
-    console.log("clicked");
-    video.classList.toggle("hidden");
-    button.classList.toggle("hidden");
-    close.classList.toggle("black");
+    window.scrollTo({top: 700, left: 0, behavior: "smooth"});
 })
-close.addEventListener('click', (e) => {
-    video.classList.toggle("hidden");
-    button.classList.toggle("hidden");
-    close.classList.toggle("black");
-    video.pause();
-    video.currentTime = 0;
-})
+
+// GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+const timeline = gsap.timeline({defaults: {}})
+
+timeline
+    .from(".video", {
+        scrollTrigger: {
+            trigger: ".yours",
+            endTrigger: ".yours",
+            scrub: true,
+            start: "top top",
+            end: "bottom bottom"
+        },
+        ease: true,
+        x: "100%",
+        opacity: 0
+        })
+    .from(".overlay", {
+        scrollTrigger: {
+            trigger: ".yours",
+            endTrigger: ".yours",
+            scrub: 1,
+            start: "top top",
+            end: "bottom bottom"
+        },
+        opacity: 0
+    })
+    .from(".mine", {
+        scrollTrigger: {
+            trigger: ".mine",
+            endTrigger: ".mine",
+            scrub: 1,
+            // markers: true,
+            start: "top 60%",
+            end: "bottom 40%"
+        },
+        opacity: 0.9
+    })

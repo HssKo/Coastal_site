@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coastal</title>
 
+    <!-- Search Indexing -->
+    <meta name=”robots” content="index, follow">
+    <meta name="description" content="Newport Beach California tiki boat band commonly found playing sunshine inspired music off the coast of Balboa Island.">
+    <title>Coastal Newport Beach</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="resources/css/style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" defer></script>
     <script src="resources/js/script.js" defer></script>
 </head>
 <body>
     <div class="yours">
+        <div class="overlay"></div>
         <button class="mine">view content</button>
-        <div class="close black">x</div>
-        <video id="video" class="video hidden" controls>
+        <video id="video" class="video" controls>
             <source src="https://coastal-music.s3.us-west-1.amazonaws.com/IMG_1894.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
