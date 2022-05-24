@@ -18,14 +18,12 @@ html::-webkit-scrollbar-track {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     background-color: white;
     background-image: url(https://coastal-music.s3.us-west-1.amazonaws.com/Coastal-band-photo.jpg);
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 2000px;
     width: 100%;
     
 }
@@ -40,7 +38,6 @@ html::-webkit-scrollbar-track {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 2000px;
     width: 100%;
 }
 
@@ -76,8 +73,9 @@ html::-webkit-scrollbar-track {
 }
 
 /* Mobile Styling */
-@media (max-width: 600px) {
-    .yours {
+@media (max-width: 768px) {
+    .yours,
+    .overlay {
         height: 1200px;
     }
     .video {
@@ -85,13 +83,26 @@ html::-webkit-scrollbar-track {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1920px) {
+    .yours,
+    .overlay {
+        height: 1500px;
+    }
+    .video {
+        top: 10%;
+    }
+}
+
 /* Ultrawide Styling */
 @media (min-width: 1920px) {
+    .yours,
+    .overlay {
+        height: 2000px;
+    }
     .video {
         border-radius: 20px;
         top: 5%;
         height: 90%;
         width: auto;
-        /* max-width: 90vh; */
     }
 }
