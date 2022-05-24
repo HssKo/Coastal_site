@@ -45,3 +45,14 @@ timeline
         },
         opacity: 0.9
     })
+    .from(".mine", {
+        scrollTrigger: {
+            trigger: ".mine",
+            endTrigger: ".mine",
+            scrub: 0.2,
+            // markers: true,
+            start: "top 85%",
+            end: "bottom 60%"
+        },
+        y: "40%"
+    })
