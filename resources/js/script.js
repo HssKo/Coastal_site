@@ -14,8 +14,8 @@ const timeline = gsap.timeline({defaults: {}})
 timeline
     .from(".video", {
         scrollTrigger: {
-            trigger: ".yours",
-            endTrigger: ".yours",
+            trigger: ".overlay",
+            endTrigger: ".overlay",
             scrub: true,
             start: "top top",
             end: "bottom bottom"
@@ -26,8 +26,8 @@ timeline
         })
     .from(".overlay", {
         scrollTrigger: {
-            trigger: ".yours",
-            endTrigger: ".yours",
+            trigger: ".overlay",
+            endTrigger: ".overlay",
             scrub: 1,
             start: "top top",
             end: "bottom bottom"

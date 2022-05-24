@@ -3,6 +3,9 @@ body {
     margin: 0;
     overflow-y: scroll;
 }
+body {
+    /* position: fixed; */
+}
 
 /* Remove scrollbar */
 html::-webkit-scrollbar,
@@ -24,6 +27,10 @@ html::-webkit-scrollbar-track {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-attachment: fixed;
+    -webkit-background-position: top;
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-size: cover;
     width: 100%;
     
 }
@@ -77,6 +84,11 @@ html::-webkit-scrollbar-track {
     .yours,
     .overlay {
         height: 1200px;
+    }
+    .yours {
+        background-size: 125%;
+        background-position: 50% 5%;
+        padding-top: 10%;
     }
     .video {
         width: 95%;
