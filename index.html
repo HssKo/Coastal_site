@@ -31,10 +31,13 @@
 <body>
     <div class="yours">
         <button class="mine">view content</button>
-        <video id="video" class="video" controls="controls" preload="none">
-            <source src="https://coastal-music.s3.us-west-1.amazonaws.com/IMG_1894.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="video-container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/XAPQq1BzwZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <video id="video" class="video-container" controls controlsList="nodownload nofullscreen" playsinline poster="https://coastal-music.s3.us-west-1.amazonaws.com/image0.jpg">
+                <source src="https://youtube.com/embed/XAPQq1BzwZA" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+        </div>
     </div>
     <div class="overlay"></div>
 </body>
